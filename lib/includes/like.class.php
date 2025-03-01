@@ -7,7 +7,7 @@ class Like{
             echo "You already like this image";
         }
         else{
-            cookie::set_cookie($agent);
+            // cookie::set_cookie($agent);
             echo "New cookie added";
             Like::add_like($id,$agent);
         }
