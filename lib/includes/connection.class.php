@@ -14,10 +14,10 @@ class Database{
             $connection = new mysqli($servername, $username, $password, $dbname);
             // Check connection
             if ($connection->connect_error) {
-                die("Connection failed: " . $connection->connect_error); //TODO: Replace this with exception handling
+                die("Connection failed: " . $connection->connect_error); 
             } else {
                 // printf("New connection establishing...");
-                DataBase::$conn = $connection; //replacing null with actual connection
+                DataBase::$conn = $connection;
                 return DataBase::$conn;
             }
         } else {
@@ -25,14 +25,6 @@ class Database{
             return DataBase::$conn;
         }
     }
-    // public function __construct(){
-    //     if(cookie::get_cookie()){
-    //         echo "cookie already exist";
-    //     }
-    //     else{
-    //         cookie::set_cookie();
-    //     }
-    // }
 
 
 }
